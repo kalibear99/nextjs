@@ -7,11 +7,11 @@ const Users = () => {
         password: "",
     });
 
-    const onChange = (e) => {
+    const onChange = (e: any) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const onSubmit = async (e) => {
+    const onSubmit = async (e: any) => {
         e.preventDefault();
 
         try {
