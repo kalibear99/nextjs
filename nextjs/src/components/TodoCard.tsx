@@ -23,10 +23,10 @@ function TodoCard({title, completed, id}: Props) {
   return (
     <form action={handleDelete}>
       <div className='card select-none cursor-pointer'>
-        <div className='card__wrapper flex justify-between p-4 border'>
-          <p className='text-lg font-semibold'>{title}</p>
-          <button className='text-blue-500 hover:text-blue-700'>
-            {completed ? 'Completed' : 'Complete'}
+        <div className='flex justify-between'>
+          <p className='text-lg font-semibold text-white mt-4'>{title}</p>
+          <button className='text-white bg-blue-600 rounded-md p-2 mt-4'>
+            {completed ? 'Completed' : 'Smazat'}
           </button>
         </div>
       </div>

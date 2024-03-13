@@ -20,21 +20,24 @@ export default function TodoForm() {
   };
 
   return (
-    <form onSubmit={handleAddTodo} className='flex flex-row border'>
+    <form onSubmit={handleAddTodo} className='flex '>
+
       <input
         type='text'
         name='body'
         value={title}
         onChange={(e) => setBody(e.target.value)}
-        className='ml-2 w-full outline-none text-white bg-black'
-        placeholder='Věci které musíš udělat ty sráči :)'
+        className='border-2 border-blue-500 w-96 outline-none text-white bg-black text-center'
+        placeholder='Věci které musíš udělat ty sráči :) '
       />
-      <input
+
+      <input        
         type='submit'
-        className='p-2 ml-auto bg-blue-500 hover:bg-blue-700 cursor-pointer'
-        value={isLoading ? 'Adding Todo...' : 'Add Todo'}
+        className='p-2 ml-auto bg-blue-500 hover:bg-blue-700 rounded-md text-white cursor-pointer'
+        value={isLoading ? 'Adding Todo...' : 'Přidat věci'}
         disabled={isLoading}
       />
+
     </form>
   );
 }
