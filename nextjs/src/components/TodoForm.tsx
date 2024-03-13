@@ -11,8 +11,11 @@ export default function TodoForm() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const todo = await addTodo(title.toString());
-      setBody('');
+      if(title.length > 0){
+        const todo = await addTodo(title.toString());
+        setBody('');
+      }
+      
     } catch (error) {
       console.error(error);
     }
@@ -33,10 +36,11 @@ export default function TodoForm() {
 
       <input        
         type='submit'
-        className='p-2 ml-auto bg-blue-500 hover:bg-blue-700 rounded-md text-white cursor-pointer'
+        className='p-2 ml-auto bg-blue-500 hover:bg-blue-700 rounded-md text-white cursor-pointer '
         value={isLoading ? 'Adding Todo...' : 'Přidat věci'}
         disabled={isLoading}
       />
+
 
     </form>
   );

@@ -24,13 +24,17 @@ function TodoCard({title, completed, id}: Props) {
     <form action={handleDelete}>
       <div className='card select-none cursor-pointer'>
         <div className='flex justify-between'>
-          <p className='text-lg font-semibold text-white mt-4'>{title}</p>
+          <div className="flex gap-7">
+            <input type="checkbox" className='w-4 h-4 mt-6'/>
+            <p className='text-lg font-semibold text-white mt-4'>{title}</p>
+          </div>
           <button className='text-white bg-blue-600 rounded-md p-2 mt-4'>
             {completed ? 'Completed' : 'Smazat'}
           </button>
         </div>
       </div>
     </form>
+
   );
 }
 
