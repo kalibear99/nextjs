@@ -23,25 +23,22 @@ export default function TodoForm() {
   };
 
   return (
-    <form onSubmit={handleAddTodo} className='flex '>
+    <form onSubmit={handleAddTodo} className='flex gap-20'>
+        <input
+          type='text'
+          name='body'
+          value={title}
+          onChange={(e) => setBody(e.target.value)}
+          className='border-2 border-blue-500 w-96 outline-none text-white bg-black text-center'
+          placeholder='Věci které musíš splnit :) '
+        />
 
-      <input
-        type='text'
-        name='body'
-        value={title}
-        onChange={(e) => setBody(e.target.value)}
-        className='border-2 border-blue-500 w-96 outline-none text-white bg-black text-center'
-        placeholder='Věci které musíš udělat ty sráči :) '
-      />
-
-      <input        
-        type='submit'
-        className='p-2 ml-auto bg-blue-500 hover:bg-blue-700 rounded-md text-white cursor-pointer '
-        value={isLoading ? 'Adding Todo...' : 'Přidat věci'}
-        disabled={isLoading}
-      />
-
-
+        <input        
+          type='submit'
+          className='p-2 ml-auto bg-blue-500 hover:bg-blue-700 rounded-md text-white cursor-pointer uppercase w-36 '
+          value={isLoading ? 'Adding Todo...' : 'Přidat věci'}
+          disabled={isLoading}
+        />
     </form>
   );
 }
