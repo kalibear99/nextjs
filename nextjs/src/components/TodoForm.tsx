@@ -30,7 +30,7 @@ export default function TodoForm() {
           value={title}
           onChange={(e) => setBody(e.target.value)}
           className='border-2 border-blue-500 w-96 outline-none text-white bg-black text-center'
-          placeholder='Věci které musíš splnit :) '
+          placeholder='Věci které musíš udělat :) '
         />
 
         <input        
