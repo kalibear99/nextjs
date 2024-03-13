@@ -21,7 +21,7 @@ export default async function Home(){
       </svg>
 
         <h2 className='text-2xl font-bold select-none text-white pb-8 pt-4 text-[40px] mt-2'>To-Do List</h2>
-      </header>
+    </header>
       
         <TodoForm />
         <TodoList data={parsedTodos}/>
